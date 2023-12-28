@@ -35,9 +35,9 @@ public:
     const auto message = buffer_.getDataByTimestamp(
       std::chrono::system_clock::time_point(std::chrono::seconds(0)), false);
     if (message) {
-      if (message->timestamp == prev_timestamp_) {
-        return;
-      }
+//      if (message->timestamp == prev_timestamp_) {
+//        return;
+//      }
       const auto & data = message->data;
       sensor_msgs::PointCloud2Iterator<float> iter_x(*data, "x");
       sensor_msgs::PointCloud2Iterator<float> iter_y(*data, "y");
