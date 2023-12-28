@@ -17,6 +17,7 @@ ament_auto_add_library(raylib_viz SHARED
   src/node.cpp
   src/window.cpp
   src/viewer3d.cpp
+  src/topic_plugin/rlights.cpp
 )
 
 target_link_libraries(raylib_viz
@@ -30,4 +31,5 @@ rclcpp_components_register_node(raylib_viz
 
 ament_auto_package(INSTALL_TO_SHARE
   launch
+  shaders
 )

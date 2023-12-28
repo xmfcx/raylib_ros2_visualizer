@@ -23,4 +23,5 @@ public:
   ~Viewer3D();
   void setViewerFrame(std::string viewer_frame);
   void visualize();
+  void init_drawing();
 };

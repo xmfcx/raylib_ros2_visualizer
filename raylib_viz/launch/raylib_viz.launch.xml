@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+
+  <node pkg="raylib_viz"
+        exec="raylib_viz_node"
+        name="raylib_viz_node"
+        namespace=""
+  >
+
+    <param name="shader_path_lighting" value="$(find-pkg-share raylib_viz)/shaders/lighting.fs"/>
+    <param name="shader_path_lighting_instancing" value="$(find-pkg-share raylib_viz)/shaders/lighting_instancing.fs"/>
+
+    <remap from="input" to="/sensing/lidar/top/pointcloud_raw"/>
+  </node>
+
+
+</launch>

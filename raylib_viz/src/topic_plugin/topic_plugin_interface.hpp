@@ -15,5 +15,6 @@ public:
   virtual ~TopicPluginInterface() {}
   virtual void visualize() = 0;
   virtual void init(){};
+  virtual void init_drawing(){};
   virtual void preprocess(){};
 };

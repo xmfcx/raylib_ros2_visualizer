@@ -19,6 +19,7 @@ void Window::run(std::function<bool()> continueLoop)
 
   SetTargetFPS(fps_);  // Set our game to run at 60 frames-per-second
   ClearBackground(WHITE);
+  viewer3d.init_drawing();
 
   while (continueLoop())  // Detect window close button or ESC key
   {

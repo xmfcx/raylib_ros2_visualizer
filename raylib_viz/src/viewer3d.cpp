@@ -24,6 +24,13 @@ void Viewer3D::setViewerFrame(std::string viewer_frame)
   viewer_frame_ = viewer_frame;
 }
 
+void Viewer3D::init_drawing()
+{
+  for (const auto & topic_plugin : topic_plugins_) {
+    topic_plugin->init_drawing();
+  }
+}
+
 void Viewer3D::visualize()
 {
   ClearBackground(RAYWHITE);
